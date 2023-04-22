@@ -65,46 +65,32 @@ func main() {
 }
 
 func generateOrder() Order {
-	// Choose a random table number between 1 and 9
-	tableNumber := rand.Intn(9) + 1
-
-	// Generate a random number of order items following a Poisson distribution with lambda = 1
-	numItems := poisson(1)
+	tableNumber := 1 + rand.Intn(9)
+	numItems := 1 + poisson(1)
 
 	// Choose random order items from the item pool
 	items := make([]OrderItem, 0)
 	for i := 0; i < numItems; i++ {
-		item := itemPool[rand.Intn(len(itemPool))]
-
-		// Generate a random quantity between 1 and 5
-		quantity := rand.Intn(5) + 1
-
-		items = append(items, OrderItem{
-			ID:       item.id,
-			Price:    item.price,
-			Category: item.category,
-			Quantity: quantity,
-		})
-	}
-
-	// Ensure the order has at least one item
-	if len(items) == 0 {
-		item := itemPool[rand.Intn(len(itemPool))]
-
-		// Generate a random quantity between 1 and 5
-		quantity := rand.Intn(5) + 1
-
-		items = append(items, OrderItem{
-			ID:       item.id,
-			Price:    item.price,
-			Category: item.category,
-			Quantity: quantity,
-		})
+		items = append(items, generateOrderItem())
 	}
 
 	return Order{
 		TableNumber: tableNumber,
 		Items:       items,
+	}
+}
+
+func generateOrderItem() OrderItem {
+	item := itemPool[rand.Intn(len(itemPool))]
+
+	// Generate a random quantity between 1 and 5
+	quantity := rand.Intn(5) + 1
+
+	return OrderItem{
+		ID:       item.id,
+		Price:    item.price,
+		Category: item.category,
+		Quantity: quantity,
 	}
 }
 
