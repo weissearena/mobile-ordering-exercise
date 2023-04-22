@@ -1,0 +1,25 @@
+{
+    "name": "mobile-ordering-exercise",
+    "version": "0.0.0",
+    "author": "Leo Baker-Hytch <leo.bakerhytch@laax.com>",
+    "license": "UNLICENSED",
+    "private": true,
+    "main": "index.ts",
+    "prettier": {
+        "printWidth": 120,
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "all"
+    },
+    "dependencies": {
+        "ts-node": "^10.9.1"
+    },
+    "devDependencies": {
+        "@types/node": "^18.15.13",
+        "prettier": "^2.8.7",
+        "typescript": "^5.0.4"
+    },
+    "scripts": {
+        "start": "ts-node src/index.ts"
+    }
+}
