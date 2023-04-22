@@ -24,7 +24,9 @@
         "typescript": "^5.0.4"
     },
     "scripts": {
-        "start": "ts-node src/index.ts",
-        "serve": "nodemon src/serve.ts"
+        "lightspeed": "./bin/lightspeed",
+        "orderbot": "./bin/orderbot",
+        "serve": "nodemon src/serve.ts",
+        "start": "ts-node src/index.ts"
     }
 }
