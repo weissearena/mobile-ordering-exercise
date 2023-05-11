@@ -26,7 +26,6 @@
     "scripts": {
         "lightspeed": "./bin/lightspeed",
         "orderbot": "./bin/orderbot",
-        "serve": "nodemon src/serve.ts",
         "start": "ts-node src/index.ts"
     }
 }
