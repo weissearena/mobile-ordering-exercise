@@ -6,10 +6,11 @@
     "private": true,
     "main": "index.ts",
     "prettier": {
-        "printWidth": 120,
+        "printWidth": 100,
         "singleQuote": true,
         "tabWidth": 4,
-        "trailingComma": "all"
+        "trailingComma": "all",
+        "semi": false
     },
     "dependencies": {
         "body-parser": "^1.20.2",
