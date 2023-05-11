@@ -27,6 +27,7 @@
     "scripts": {
         "lightspeed": "./bin/lightspeed",
         "orderbot": "./bin/orderbot",
-        "start": "ts-node src/index.ts"
+        "start": "ts-node src/index.ts",
+        "build": "go build -o bin/orderbot go/orderbot.go && go build -o bin/lightspeed go/lightspeed.go"
     }
 }
