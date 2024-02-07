@@ -61,6 +61,14 @@ brew install go
 npm run build
 ```
 
+Or if you don't want to install Go on your machine, you can use the dev container provided and start the Go files with:
+
+```
+go run src/lightspeed.go
+go run src/orderbot.go
+```
+
+
 You should edit the code in `src/index.ts` to solve the problem. You may install
 any additional dependencies you need. You may also use any online resources you
 like.
