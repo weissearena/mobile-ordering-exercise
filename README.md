@@ -64,8 +64,8 @@ npm run build
 Or if you don't want to install Go on your machine, you can use the dev container provided and start the Go files with:
 
 ```
-go run src/lightspeed.go
-go run src/orderbot.go
+go run go/lightspeed.go
+go run go/orderbot.go
 ```
 
 
